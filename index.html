@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine?</title>
-	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ1QKlyjYZAKIKK7q5TOQ51zKHnF4s5qOTAWKFoRmt/hApKnFQOS2T+uWvF9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
     <style>
         body {
-	    font-family: "Emilys Candy", serif;
-	    font-weight: 400;
-	    font-style: normal;
+            font-family: "Emilys Candy", serif;
+            font-weight: 400;
+            font-style: normal;
             background-color: #FFEBEE;
             margin: 0;
             padding: 0;
@@ -25,19 +27,19 @@
         }
         .container {
             background-image: url('love.jpg');
-            background-size: contain; /* Ensure the entire image is visible */
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Prevent image from repeating */
+            background-size: contain; 
+            background-position: center; 
+            background-repeat: no-repeat; 
             padding: 50px;
             border-radius: 10px;
             text-align: center;
             animation: fadeIn 1s ease-out;
-            max-width: 90%; /* Make container responsive */
+            max-width: 90%; 
             width: 100%;
-	    height: 100vh;
+            height: 100vh;
             box-sizing: border-box;
-            height: auto; /* Ensure container height adjusts dynamically */
-	    background-color: transparent;
+            height: auto; 
+            background-color: transparent;
         }
         h1 {
             font-size: 2.5em;
@@ -50,11 +52,11 @@
         .heart {
             font-size: 2.5em;
             color: #FF4081;
-	    display: inline-block;
+            display: inline-block;
             animation: heartBeat 1.5s infinite;
         }
         button {
-	    font-family: "Emilys Candy", serif;
+            font-family: "Emilys Candy", serif;
             background-color: #FF4081;
             color: white;
             border: none;
@@ -73,14 +75,14 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-	@keyframes heartBeat {
-		0% { transform: scale( .75 ); }
-		20% { transform: scale( 1 ); }
-		40% { transform: scale( .75 ); }
-		60% { transform: scale( 1 ); }
-		80% { transform: scale( .75 ); }
-		100% { transform: scale( .75 ); }
-	}
+        @keyframes heartBeat {
+            0% { transform: scale( .75 ); }
+            20% { transform: scale( 1 ); }
+            40% { transform: scale( .75 ); }
+            60% { transform: scale( 1 ); }
+            80% { transform: scale( .75 ); }
+            100% { transform: scale( .75 ); }
+        }
         /* Hide the video initially */
         .video-container {
             display: none;
@@ -93,11 +95,11 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Mobile adjustments */
+        /* Mobile adjustments with Bootstrap */
         @media (max-width: 768px) {
             .container {
                 padding: 30px;
-                background-size: contain; /* Keep image fully visible on small screens */
+                background-size: contain; 
             }
             h1 {
                 font-size: 2em;
@@ -113,7 +115,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container text-center">
         <h1>Bubbie, Will you be my Valentine?</h1>
         <p><span class="heart">💖💖💖💐💐💐</span></p>
         <div>
@@ -129,6 +131,10 @@
             </video>
         </div>
     </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6Oq8fAAN4j5W8E5gnrd5I6EhwQ6HzP8kbGfZzpQUOX3g2Ub" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0ZGx2ts2MDwty4p+Bh71Yz8hpjIN7S6wVxJtG2G3L+6Rvu0S" crossorigin="anonymous"></script>
 
     <script>
         function showVideo() {
