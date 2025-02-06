@@ -33,9 +33,12 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: fadeIn 1s ease-out;
+            max-width: 90%; /* Make container responsive */
+            width: 100%;
+            box-sizing: border-box;
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 40px;
         }
         p {
@@ -43,7 +46,7 @@
             margin-bottom: 40px;
         }
         .heart {
-            font-size: 2em;
+            font-size: 2.5em;
             color: #FF4081;
 			display: inline-block;
             animation: heartBeat 1.5s infinite;
@@ -82,10 +85,27 @@
             margin-top: 30px;
         }
         video {
-            width: 80%;
+            width: 100%;
             max-width: 600px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .heart {
+                font-size: 2em;
+            }
+            button {
+                padding: 12px 25px;
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
