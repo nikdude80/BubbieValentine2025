@@ -42,7 +42,7 @@
             background-color: transparent;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 3em; /* Default size */
             margin-bottom: 40px;
         }
         p {
@@ -55,7 +55,7 @@
             display: inline-block;
             animation: heartBeat 1.5s infinite;
         }
-        button {
+        .btn {
             font-family: "Emilys Candy", serif;
             background-color: #FF4081;
             color: white;
@@ -67,7 +67,7 @@
             transition: 0.3s;
             margin: 10px;
         }
-        button:hover {
+        .btn:hover {
             background-color: #FF1E57;
             transform: scale(1.1);
         }
@@ -97,17 +97,16 @@
 
         /* Mobile adjustments with Bootstrap */
         @media (max-width: 768px) {
-            .container {
-                padding: 30px;
-                background-size: contain; 
-            }
             h1 {
-                font-size: 2em;
+                font-size: 2.5rem; /* Scaled down */
+            }
+            p {
+                font-size: 1rem; /* Scaled down for mobile */
             }
             .heart {
-                font-size: 2em;
+                font-size: 2rem; /* Scaled down */
             }
-            button {
+            .btn {
                 padding: 12px 25px;
                 font-size: 1.1em;
             }
@@ -116,11 +115,11 @@
 </head>
 <body>
     <div class="container text-center">
-        <h1>Bubbie, Will you be my Valentine?</h1>
-        <p><span class="heart">💖💖💖💐💐💐</span></p>
+        <h1 class="display-4">Bubbie, Will you be my Valentine?</h1>
+        <p class="lead"><span class="heart">💖💖💖💐💐💐</span></p>
         <div>
-            <button onclick="showVideo()">Yes, I will!</button>
-            <button onclick="noResponse()">No, sorry!</button>
+            <button class="btn" onclick="showVideo()">Yes, I will!</button>
+            <button class="btn" onclick="noResponse()">No, sorry!</button>
         </div>
 
         <!-- Hidden video container -->
