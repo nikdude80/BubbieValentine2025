@@ -15,42 +15,43 @@
             font-family: "Emilys Candy", serif;
             font-weight: 400;
             font-style: normal;
-            background-color: #FFEBEE;
+            background: linear-gradient(135deg, #FF4081, #FF80AB);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #FF4081;
+            color: white;
             text-align: center;
         }
         .container {
             background-image: url('love.jpg');
-            background-size: contain; 
-            background-position: center; 
-            background-repeat: no-repeat; 
+            background-size: cover;
+            background-position: center;
             padding: 50px;
-            border-radius: 10px;
+            border-radius: 20px;
             text-align: center;
             animation: fadeIn 1s ease-out;
-            max-width: 90%; 
+            max-width: 90%;
             width: 100%;
-            height: 100vh;
+            height: auto;
             box-sizing: border-box;
-            height: auto; 
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            font-size: 3em; /* Default size */
-            margin-bottom: 40px;
+            font-family: 'Pacifico', cursive;
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: slideIn 2s ease-out;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin-bottom: 40px;
         }
         .heart {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #FF4081;
             display: inline-block;
             animation: heartBeat 1.5s infinite;
@@ -60,20 +61,26 @@
             background-color: #FF4081;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 20px 40px;
+            font-size: 1.3em;
             border-radius: 30px;
             cursor: pointer;
-            transition: 0.3s;
-            margin: 10px;
+            transition: 0.4s;
+            margin: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
         .btn:hover {
             background-color: #FF1E57;
             transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(-30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
         @keyframes heartBeat {
             0% { transform: scale( .75 ); }
@@ -92,29 +99,28 @@
             width: 100%;
             max-width: 600px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-
-        /* Mobile adjustments with Bootstrap */
+        /* Mobile adjustments */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem; /* Scaled down */
+                font-size: 2.8rem;
             }
             p {
-                font-size: 1rem; /* Scaled down for mobile */
+                font-size: 1.2rem;
             }
             .heart {
-                font-size: 2rem; /* Scaled down */
+                font-size: 2.5rem;
             }
             .btn {
-                padding: 12px 25px;
-                font-size: 1.1em;
+                padding: 15px 30px;
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container text-center">
+    <div class="container">
         <h1 class="display-4">Bubbie, Will you be my Valentine?</h1>
         <p class="lead"><span class="heart">💖💖💖💐💐💐</span></p>
         <div>
